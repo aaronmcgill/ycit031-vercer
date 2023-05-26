@@ -15,6 +15,7 @@ FROM messages`;
 
   return (
     <main className={styles.main}>
+      <p>Welcome to my app!</p>
       {rows.map((r) => (
         <span>
           <span>{r.name}</span>
