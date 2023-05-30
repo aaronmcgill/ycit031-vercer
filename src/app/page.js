@@ -13,13 +13,18 @@ FROM messages`;
 
   console.log(rows);
 
+  // console.log({
+  //     POSTGRES_URL: process.env.POSTGRES_URL,
+  //     POSTGRES_URL_NON_POOLING: process.env.POSTGRES_URL_NON_POOLING
+  //   });
+
   return (
     <main className={styles.main}>
       <p>Welcome to my app!</p>
       {rows.map((r) => (
         <span>
-          <span>{r.name}</span>
-          <span>{r.message}</span>
+          <span key="{name}">{r.name} <br></br></span>
+          <span key="{message}">{r.message}</span>
         </span>
       ))}
     </main>
